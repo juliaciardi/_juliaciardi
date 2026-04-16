@@ -1,0 +1,32 @@
+﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.WriteLine("=== Calculadora de IMC ===");
+// Entrada de dados
+Console.Write("Digite seu peso (kg): ");
+double peso = double.Parse(Console.ReadLine());
+Console.Write("Digite sua altura (m): ");
+double altura = double.Parse(Console.ReadLine());
+// Cálculo do IMC
+double imc = peso / Math.Pow(altura, 2);
+// Exibir IMC
+Console.WriteLine($"\nSeu IMC é: {Math.Round(imc, 2)}");
+// Classificação
+if (imc < 18.5)
+{
+    Console.WriteLine("Classificação: Magreza");
+}
+else if (imc >= 18.5 && imc <= 24.9)
+{
+    Console.WriteLine("Classificação: Normal");
+}
+else if (imc >= 25.0 && imc <= 29.9)
+{
+    Console.WriteLine("Classificação: Sobrepeso");
+}
+else if (imc >= 30.0 && imc <= 39.9)
+{
+    Console.WriteLine("Classificação: Obesidade");
+}
+else
+{
+    Console.WriteLine("Classificação: Obesidade Grave");
+}
