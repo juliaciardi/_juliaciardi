@@ -1,0 +1,61 @@
+﻿class Program
+{
+    static void Main()
+    {
+        //  Ativando suporte para emojis e símbolos
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        Console.WriteLine(" --- Conversor Universal --- \n");
+
+        Console.WriteLine("Escolha a conversão desejada:");
+        Console.WriteLine("1 - Celsius (°C) → Fahrenheit (°F)");
+        Console.WriteLine("2 - Fahrenheit (°F) → Celsius (°C)");
+        Console.WriteLine("3 - Kelvin (K) → Celsius (°C)");
+        Console.WriteLine("4 - Kelvin (K) → Fahrenheit (°F)");
+        Console.Write("\nDigite a opção (1, 2, 3 ou 4): ");
+
+        string opcao = Console.ReadLine();
+
+        Console.Write("\nDigite a temperatura: ");
+
+        //  Leitura + conversão segura em uma linha
+        if (float.TryParse(Console.ReadLine(), out float valor))
+        {
+            float resultado = 0;
+
+            switch (opcao)
+            {
+                case "1":
+                    resultado = (valor * 9 / 5) + 32;
+                    Console.WriteLine($"\n {valor:F2}°C = {resultado:F2}°F");
+                    break;
+
+                case "2":
+                    resultado = (valor - 32) * 5 / 9;
+                    Console.WriteLine($"\n❄ {valor:F2}°F = {resultado:F2}°C");
+                    break;
+
+                case "3":
+                    resultado = valor - 273.15f;
+                    Console.WriteLine($"\n {valor:F2}K = {resultado:F2}°C");
+                    break;
+
+                case "4":
+                    resultado = (valor - 273.15f) * 9 / 5 + 32;
+                    Console.WriteLine($"\n {valor:F2}K = {resultado:F2}°F");
+                    break;
+
+                default:
+                    Console.WriteLine("\n Opção inválida!");
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("\n Erro: Digite apenas números!");
+        }
+
+        Console.WriteLine("\nPressione qualquer tecla para sair...");
+        Console.ReadKey();
+    }
+}
