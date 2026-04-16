@@ -1,0 +1,11 @@
+﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.WriteLine("Vamos calcular uma PA! ");
+Console.WriteLine("Digite até que numero você quer calcular a PA: ");
+int quantidade = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite a razão da PA: ");
+int razao = int.Parse(Console.ReadLine());
+for (int i = 1; i <= quantidade; i = i + razao)
+{
+    Console.WriteLine($"*{i}");
+}
+Console.WriteLine("Fim da PA");
