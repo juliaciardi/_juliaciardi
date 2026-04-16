@@ -1,0 +1,55 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        // --- 1. MYTHRANDIR ---
+        Console.WriteLine("--- AREA DA MAGIA DE MYTHRANDIR ---");
+        Console.Write("Digite o valor dos lados: ");
+        double lado = double.Parse(Console.ReadLine());
+
+        double area = (Math.Pow(lado, 2) * Math.Sqrt(3)) / 4;
+        Console.WriteLine($"A area da magia e: {area}");
+
+        // --- 2. LUXOS ---
+        bool defendeu = false;
+        for (int i = 1; i <= 3; i++)
+        {
+            Console.Write($"Tentativa {i} - Digite a forca: ");
+            double forca = double.Parse(Console.ReadLine());
+            double impacto = Math.Pow(forca, 3);
+
+            if (impacto > 400)
+            {
+                Console.WriteLine("SUCESSO! Voce defendeu seu reino!");
+                defendeu = true;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Impacto fraco demais!");
+            }
+        }
+
+        if (!defendeu)
+        {
+            Console.WriteLine("VOCE PERDEU! Passara o resto da vida servindo luxos...");
+            return;
+        }
+
+        // --- 3. BIOLOGA ---
+        Console.WriteLine("\n--- CATALOGACAO ---");
+        Console.WriteLine("1. euglenofitas\n2. clorofitas\n3. bacilariofitas (e as outras 6 opcoes...)");
+        int opcao = int.Parse(Console.ReadLine());
+
+        switch (opcao)
+        {
+            case 1: Console.WriteLine("Catalogando: euglenofitas"); break;
+            case 2: Console.WriteLine("Catalogando: clorofitas"); break;
+            case 3: Console.WriteLine("Catalogando: bacilariofitas"); break;
+            // Adicione os outros cases aqui seguindo o mesmo padrão
+            default: Console.WriteLine("Opcao invalida!"); break;
+        }
+    }
+}
