@@ -1,0 +1,59 @@
+﻿using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 🧵 Nome do herói
+        string nomeHeroi = "Astride";
+
+        // 🔢 SOMA (+) – Ataque Total
+        int ataqueBase = 25;
+        int bonusArco = 15;
+        int ataqueTotal = ataqueBase + bonusArco;
+
+        // 🛳️ SUBTRAÇÃO (-) – Vida do Dragão
+        double vidaDragao = 200.0;
+        double danoCritico = 80.0;
+        double vidaRestante = vidaDragao - danoCritico;
+
+        // 🚤 MULTIPLICAÇÃO (*) – Ouro com bônus
+        float ouro = 50f;
+        float ouroFinal = ouro * 3f;
+
+        // 🐘 DIVISÃO (/) – XP por nível
+        long xpTotal = 800000;
+        long xpPorNivel = xpTotal / 4;
+
+        // 🃏 Uso do var
+        var flechasRestantes = 10 - 3; // subtração extra usando var
+
+        // 💡 Boolean
+        bool entendiMateria = true;
+
+        // 📖 História
+        Console.WriteLine("===== A ÚLTIMA FLECHA =====\n");
+
+        Console.WriteLine("A arqueira " + nomeHeroi + " enfrentou o dragão ancestral.");
+        Console.WriteLine("Seu ataque base era " + ataqueBase +
+                          " e com o bônus do arco ganhou mais " + bonusArco +
+                          ", totalizando " + ataqueTotal + " de ataque.");
+
+        Console.WriteLine("\nO dragão possuía " + vidaDragao + " de vida.");
+        Console.WriteLine("Após um golpe crítico de " + danoCritico +
+                          ", sua vida caiu para " + vidaRestante + ".");
+
+        Console.WriteLine("\nAstride tinha " + ouro + " moedas.");
+        Console.WriteLine("Com o tesouro triplicado, agora possui " + ouroFinal + " moedas!");
+
+        Console.WriteLine("\nEla acumulou " + xpTotal + " de experiência.");
+        Console.WriteLine("Dividindo por 4 níveis, recebeu " + xpPorNivel + " XP por nível.");
+
+        Console.WriteLine("\nApós a batalha, restaram " + flechasRestantes + " flechas em sua aljava.");
+
+        Console.WriteLine("\nEntendi a matéria? " + entendiMateria);
+
+        Console.WriteLine("\nPressione qualquer tecla para sair...");
+        Console.ReadKey();
+    }
+}
