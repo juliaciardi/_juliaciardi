@@ -1,0 +1,5 @@
+﻿Console.WriteLine("Cálculo de área triângulo equilátero");
+Console.WriteLine("Digite o lado: ");
+float.TryParse(Console.ReadLine(), out float lado);
+float area = (float)(Math.Pow(lado, 2f) * Math.Pow(3, 1 / 2f)) / 4;
+Console.WriteLine($"A area do triângulo = {Math.Round(area, 2)}");
